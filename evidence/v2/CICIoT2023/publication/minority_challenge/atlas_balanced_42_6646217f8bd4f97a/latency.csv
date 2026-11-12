@@ -1,0 +1,5 @@
+batch,p50_batch_ms,p95_batch_ms,p99_batch_ms,amortized_ms_per_flow,throughput_flows_s,scope,device,threads
+1,3.4136865,4.2329247,5.2063043600000025,3.4136865,292.93844059786977,prepared array to probabilities; raw parsing and reporting excluded,cpu,1
+16,4.496703,6.128995749999999,6.569708340000004,0.2810439375,3558.1625026158054,prepared array to probabilities; raw parsing and reporting excluded,cpu,1
+128,8.401884500000001,10.69353135,12.198055640000003,0.06563972265625001,15234.677410764214,prepared array to probabilities; raw parsing and reporting excluded,cpu,1
+512,18.520826,25.584463799999998,29.38015832,0.03617348828125,27644.555377821704,prepared array to probabilities; raw parsing and reporting excluded,cpu,1

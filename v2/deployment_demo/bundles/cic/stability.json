@@ -1,0 +1,5 @@
+{
+  "noise_std_standardized": 0.01,
+  "top_quarter_jaccard_like_overlap": 0.7769886363636362,
+  "prediction_agreement": 0.796875
+}

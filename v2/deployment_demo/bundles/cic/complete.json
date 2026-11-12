@@ -1,0 +1,50 @@
+{
+  "config": {
+    "variant": "atlas",
+    "seed": 42,
+    "epochs": 30,
+    "width": 128,
+    "batch_size": 512,
+    "patience": 7,
+    "loss": "balanced",
+    "threads": 2,
+    "learning_rate": 0.0008,
+    "weight_decay": 0.0002,
+    "dropout": 0.15,
+    "capacity_target": null,
+    "selection_metric": "validation_macro_f1",
+    "data_sha256": "98281d32f8d75019b0dc9c91d95916c6efe969d3eda95f360ec0a5139f46a526",
+    "source_sha256": "1cea7d96ca5447a1916225493fd3c400379053268c75468ee9e7d872b7508829"
+  },
+  "validation_metrics": {
+    "accuracy": 0.9752409903603856,
+    "balanced_accuracy": 0.7247139805568849,
+    "precision_macro": 0.6497944772185372,
+    "recall_macro": 0.7247139805568849,
+    "macro_f1": 0.6639933982269074,
+    "weighted_f1": 0.9778944545544068,
+    "mcc": 0.972918261035136,
+    "cohen_kappa": 0.9728846086155575,
+    "log_loss": 0.07630767232019231,
+    "multiclass_brier": 0.03367239193356107,
+    "ece_15": 0.005089727199786665,
+    "roc_auc_macro_ovr": 0.9975276923012278
+  },
+  "metrics": {
+    "accuracy": 0.9750992529775894,
+    "balanced_accuracy": 0.6886646517336166,
+    "precision_macro": 0.6375598596946752,
+    "recall_macro": 0.6886646517336166,
+    "macro_f1": 0.6462930775448463,
+    "weighted_f1": 0.9779815171296394,
+    "mcc": 0.9727621839864222,
+    "cohen_kappa": 0.972728379958393,
+    "log_loss": 0.07669433743549339,
+    "multiclass_brier": 0.033413870277155984,
+    "ece_15": 0.004110770781259499,
+    "roc_auc_macro_ovr": 0.9975779673522784,
+    "invocation_seconds": 2092.800574213001,
+    "model_file_bytes": 5742001
+  },
+  "metadata_path": "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/CICIoT2023/prepared_natural_8451b2005c64/metadata.json"
+}

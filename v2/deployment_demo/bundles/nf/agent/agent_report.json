@@ -1,0 +1,119 @@
+{
+  "agent": "artifact-grounded finite-state evidence agent",
+  "question": "complete",
+  "findings": [
+    {
+      "claim_type": "performance",
+      "statement": "The evaluated atlas run achieved macro-F1 0.618634, weighted-F1 0.860193, and MCC 0.780757.",
+      "values": {
+        "macro_f1": 0.618633979073055,
+        "weighted_f1": 0.8601933191875477,
+        "mcc": 0.7807572246862183
+      },
+      "sources": [
+        "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/NF-UQ-NIDS-v2/publication/natural/atlas_balanced_42_31809d9749ba9034/metrics.json",
+        "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/NF-UQ-NIDS-v2/publication/natural/atlas_balanced_42_31809d9749ba9034/test_per_class.csv",
+        "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/NF-UQ-NIDS-v2/publication/natural/atlas_balanced_42_31809d9749ba9034/config.json"
+      ]
+    },
+    {
+      "claim_type": "latency",
+      "statement": "Single-flow CPU inference had p50 3.653310 ms and p95 5.830494 ms under the recorded timing scope.",
+      "values": {
+        "p50_single_flow_ms": 3.6533095,
+        "p95_single_flow_ms": 5.830493749999999
+      },
+      "sources": [
+        "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/NF-UQ-NIDS-v2/publication/natural/atlas_balanced_42_31809d9749ba9034/latency.csv"
+      ]
+    },
+    {
+      "claim_type": "explanation",
+      "statement": "At 25% deletion, ranked-feature removal changed predicted-class probability by 0.704850, versus 0.190770 for the random control; the dominant attention branch was protocol (0.447833).",
+      "values": {
+        "top_deletion_drop_25": 0.7048497200012207,
+        "random_deletion_drop_25": 0.1907697767019271,
+        "dominant_attention_mean": 0.44783294
+      },
+      "sources": [
+        "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/NF-UQ-NIDS-v2/publication/natural/atlas_balanced_42_31809d9749ba9034/faithfulness.csv",
+        "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/NF-UQ-NIDS-v2/publication/natural/atlas_balanced_42_31809d9749ba9034/stability.json",
+        "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/NF-UQ-NIDS-v2/publication/natural/atlas_balanced_42_31809d9749ba9034/attention_summary.csv"
+      ]
+    }
+  ],
+  "verification": {
+    "accepted": 3,
+    "rejected": [],
+    "unsupported_claim_rate": 0.0
+  },
+  "tool_trace": [
+    {
+      "step": "plan",
+      "question": "complete",
+      "tools": [
+        "performance",
+        "latency",
+        "explanation"
+      ]
+    },
+    {
+      "step": "tool",
+      "tool": "read_json",
+      "artifact": "metrics.json",
+      "sha256": "5fd7035cea04a84eb79ecb028334c1b3900e2f581bd8e1c2429385880e0a1312"
+    },
+    {
+      "step": "tool",
+      "tool": "read_csv",
+      "artifact": "test_per_class.csv",
+      "sha256": "57313f7fff92cb3584fbc029b5771a2aeee6c17681dfdf7817dca57a5fc14f46"
+    },
+    {
+      "step": "tool",
+      "tool": "read_json",
+      "artifact": "config.json",
+      "sha256": "f678edfe71fb36cfb9aa29749a6ce177313fb0780f88136f7cb48cf8bf842f55"
+    },
+    {
+      "step": "tool",
+      "tool": "read_csv",
+      "artifact": "latency.csv",
+      "sha256": "22b2da0c386f2837d21910ccafa8b35a6b6908ef78da126e36e84a79dac44728"
+    },
+    {
+      "step": "tool",
+      "tool": "read_csv",
+      "artifact": "faithfulness.csv",
+      "sha256": "4872c548f2ac9b408961cc4cae0d68cbc9067c05d154aa2330d7086f8112d531"
+    },
+    {
+      "step": "tool",
+      "tool": "read_json",
+      "artifact": "stability.json",
+      "sha256": "737e4dcf2442921463874aa203d5e52b64e49ac1f1153dea7fca96748721c698"
+    },
+    {
+      "step": "tool",
+      "tool": "read_csv",
+      "artifact": "attention_summary.csv",
+      "sha256": "72579b9b0ea39d6fc2b730d803308f1c874ca55a1722cfd3b87165e8b343527c"
+    },
+    {
+      "step": "reason",
+      "finding_count": 3
+    },
+    {
+      "step": "verify",
+      "accepted": 3,
+      "rejected": [],
+      "unsupported_claim_rate": 0.0
+    }
+  ],
+  "latency_ms": 46.928964000017004,
+  "limitations": [
+    "The agent summarizes measured artifacts and does not establish causality.",
+    "It does not replace domain-expert incident assessment.",
+    "No language model was used; no LLM capability is claimed."
+  ]
+}

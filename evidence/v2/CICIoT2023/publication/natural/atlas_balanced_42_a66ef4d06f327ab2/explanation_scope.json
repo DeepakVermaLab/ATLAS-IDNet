@@ -1,0 +1,7 @@
+{
+  "samples": 256,
+  "seconds": 3.1868105269995795,
+  "baseline": "zero in training-standardized feature space",
+  "method": "single-feature occlusion with random-deletion control",
+  "limitations": "Perturbations can be off-distribution; no causal claim."
+}

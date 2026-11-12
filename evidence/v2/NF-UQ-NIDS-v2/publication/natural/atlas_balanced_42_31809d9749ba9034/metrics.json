@@ -1,0 +1,18 @@
+{
+  "accuracy": 0.809229128304203,
+  "balanced_accuracy": 0.8324850762344861,
+  "precision_macro": 0.5862276189300263,
+  "recall_macro": 0.8324850762344861,
+  "macro_f1": 0.618633979073055,
+  "weighted_f1": 0.8601933191875477,
+  "mcc": 0.7807572246862183,
+  "cohen_kappa": 0.7613377593627033,
+  "log_loss": 0.3988088690908602,
+  "multiclass_brier": 0.20919883385675772,
+  "ece_15": 0.08001133624168402,
+  "roc_auc_macro_ovr": 0.9753608502693709,
+  "binary_intrusion_false_alarm_rate": 0.4567029757195886,
+  "binary_intrusion_miss_rate": 0.0018943095542358866,
+  "invocation_seconds": 278.10308407200137,
+  "model_file_bytes": 5697393
+}

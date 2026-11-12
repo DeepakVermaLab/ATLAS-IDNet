@@ -1,0 +1,5 @@
+dataset,protocol,completed_main_seeds,accuracy_mean,weighted_f1_mean,macro_f1_mean,mcc_mean,submitted_accuracy_target,submitted_weighted_f1_target,accuracy_above_submitted_target,weighted_f1_above_submitted_target
+CICIoT2023,natural,5,0.9774813244397332,0.9805605830245565,0.6496349933194248,0.9753671082669515,0.9503,0.9462,True,True
+CICIoT2023,minority_challenge,5,0.7325299704188074,0.7339109581957264,0.7087016011919764,0.725187260652115,0.9503,0.9462,False,False
+NF-UQ-NIDS-v2,natural,5,0.813457300691279,0.8624023494443991,0.6139458061888299,0.7838177208076154,0.9795,0.9787,False,False
+NF-UQ-NIDS-v2,minority_challenge,5,0.901324543002697,0.9003950125074244,0.8885339344481225,0.8960975793535987,0.9795,0.9787,False,False

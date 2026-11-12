@@ -1,0 +1,294 @@
+{
+  "family": "Detector",
+  "variant": "atlas",
+  "trainable_parameters": 351781,
+  "groups": [
+    [
+      1,
+      4,
+      5,
+      6,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    [
+      2,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      26,
+      27,
+      30
+    ],
+    [
+      0,
+      3,
+      39
+    ]
+  ],
+  "semantic_feature_map": [
+    {
+      "feature": "flow_duration",
+      "branch": 2,
+      "reason": "time-derived flow statistic; not sequence modeling"
+    },
+    {
+      "feature": "Header_Length",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Protocol Type",
+      "branch": 1,
+      "reason": "protocol/transport descriptor"
+    },
+    {
+      "feature": "Duration",
+      "branch": 2,
+      "reason": "time-derived flow statistic; not sequence modeling"
+    },
+    {
+      "feature": "Rate",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Srate",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Drate",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "fin_flag_number",
+      "branch": 1,
+      "reason": "protocol/transport descriptor"
+    },
+    {
+      "feature": "syn_flag_number",
+      "branch": 1,
+      "reason": "protocol/transport descriptor"
+    },
+    {
+      "feature": "rst_flag_number",
+      "branch": 1,
+      "reason": "protocol/transport descriptor"
+    },
+    {
+      "feature": "psh_flag_number",
+      "branch": 1,
+      "reason": "protocol/transport descriptor"
+    },
+    {
+      "feature": "ack_flag_number",
+      "branch": 1,
+      "reason": "protocol/transport descriptor"
+    },
+    {
+      "feature": "ece_flag_number",
+      "branch": 1,
+      "reason": "protocol/transport descriptor"
+    },
+    {
+      "feature": "cwr_flag_number",
+      "branch": 1,
+      "reason": "protocol/transport descriptor"
+    },
+    {
+      "feature": "ack_count",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "syn_count",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "fin_count",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "urg_count",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "rst_count",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "HTTP",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "HTTPS",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "DNS",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Telnet",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "SMTP",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "SSH",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "IRC",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "TCP",
+      "branch": 1,
+      "reason": "protocol/transport descriptor"
+    },
+    {
+      "feature": "UDP",
+      "branch": 1,
+      "reason": "protocol/transport descriptor"
+    },
+    {
+      "feature": "DHCP",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "ARP",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "ICMP",
+      "branch": 1,
+      "reason": "protocol/transport descriptor"
+    },
+    {
+      "feature": "IPv",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "LLC",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Tot sum",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Min",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Max",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "AVG",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Std",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Tot size",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "IAT",
+      "branch": 2,
+      "reason": "time-derived flow statistic; not sequence modeling"
+    },
+    {
+      "feature": "Number",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Magnitue",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Radius",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Covariance",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Variance",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    },
+    {
+      "feature": "Weight",
+      "branch": 0,
+      "reason": "traffic statistic or remaining numeric descriptor"
+    }
+  ],
+  "capacity_target": null,
+  "linear_macs_per_flow": 344192,
+  "linear_flops_per_flow": 688384
+}

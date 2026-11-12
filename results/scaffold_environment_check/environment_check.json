@@ -1,0 +1,28 @@
+{
+  "datasets": {
+    "CICIoT2023": {
+      "file_count": 169,
+      "total_bytes": 13754161509,
+      "preview": [
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023/raw/wataiData/csv/CICIoT2023/part-00000-363d1ba3-8ab5-4f96-bc25-4d5862db7cb9-c000.csv",
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023/raw/wataiData/csv/CICIoT2023/part-00001-363d1ba3-8ab5-4f96-bc25-4d5862db7cb9-c000.csv",
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023/raw/wataiData/csv/CICIoT2023/part-00002-363d1ba3-8ab5-4f96-bc25-4d5862db7cb9-c000.csv",
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023/raw/wataiData/csv/CICIoT2023/part-00003-363d1ba3-8ab5-4f96-bc25-4d5862db7cb9-c000.csv",
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023/raw/wataiData/csv/CICIoT2023/part-00004-363d1ba3-8ab5-4f96-bc25-4d5862db7cb9-c000.csv",
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023/raw/wataiData/csv/CICIoT2023/part-00005-363d1ba3-8ab5-4f96-bc25-4d5862db7cb9-c000.csv",
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023/raw/wataiData/csv/CICIoT2023/part-00006-363d1ba3-8ab5-4f96-bc25-4d5862db7cb9-c000.csv",
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023/raw/wataiData/csv/CICIoT2023/part-00007-363d1ba3-8ab5-4f96-bc25-4d5862db7cb9-c000.csv",
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023/raw/wataiData/csv/CICIoT2023/part-00008-363d1ba3-8ab5-4f96-bc25-4d5862db7cb9-c000.csv",
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023/raw/wataiData/csv/CICIoT2023/part-00009-363d1ba3-8ab5-4f96-bc25-4d5862db7cb9-c000.csv"
+      ]
+    },
+    "NF-UQ-NIDS-v2": {
+      "file_count": 1,
+      "total_bytes": 13729330230,
+      "preview": [
+        "/Volumes/LocalDrive1/Dataset/Security/NF-UQ-NIDS-v2/raw/NF-UQ-NIDS-v2.csv"
+      ]
+    }
+  },
+  "run_dir": "/Volumes/LocalDrive1/onlyscholar-projects/ATLAS-IDNet/implementation/results/scaffold_environment_check"
+}

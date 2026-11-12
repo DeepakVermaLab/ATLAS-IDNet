@@ -1,0 +1,17 @@
+{
+  "variant": "atlas",
+  "seed": 42,
+  "epochs": 30,
+  "width": 128,
+  "batch_size": 512,
+  "patience": 7,
+  "loss": "balanced",
+  "threads": 2,
+  "learning_rate": 0.0008,
+  "weight_decay": 0.0002,
+  "dropout": 0.15,
+  "capacity_target": null,
+  "selection_metric": "validation_macro_f1",
+  "data_sha256": "98281d32f8d75019b0dc9c91d95916c6efe969d3eda95f360ec0a5139f46a526",
+  "source_sha256": "1cea7d96ca5447a1916225493fd3c400379053268c75468ee9e7d872b7508829"
+}

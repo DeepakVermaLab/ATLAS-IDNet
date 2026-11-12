@@ -1,0 +1,5 @@
+run_dir,complete,finding_count,unsupported_claim_rate,agent_latency_ms,evaluation_seconds
+/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/CICIoT2023/publication/natural/atlas_balanced_42_a66ef4d06f327ab2,True,3,0.0,50.14014000005318,0.06749334900007398
+/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/CICIoT2023/publication/minority_challenge/atlas_balanced_42_6646217f8bd4f97a,True,3,0.0,47.532724000006965,0.06594614799996634
+/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/NF-UQ-NIDS-v2/publication/natural/atlas_balanced_42_31809d9749ba9034,True,3,0.0,46.928964000017004,0.06366024600004039
+/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/NF-UQ-NIDS-v2/publication/minority_challenge/atlas_balanced_42_b53d39b10f32bf42,True,3,0.0,44.62294200004635,0.0807300070000565

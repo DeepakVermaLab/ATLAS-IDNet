@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ATLAS-IDNet Deployment Evidence Console</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-block">
+      <span class="brand-mark">A</span>
+      <div>
+        <h1>ATLAS-IDNet</h1>
+        <p>Deployment evidence console</p>
+      </div>
+    </div>
+    <div class="dataset-switch" role="tablist" aria-label="Dataset">
+      <button class="dataset-tab active" data-dataset="cic" role="tab">CICIoT2023</button>
+      <button class="dataset-tab" data-dataset="nf" role="tab">NF-UQ-NIDS-v2</button>
+    </div>
+    <div class="status-strip">
+      <span><i class="status-dot"></i>CPU verified</span>
+      <span>Natural prior</span>
+      <span>Token-free agent</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="context-band">
+      <div>
+        <p class="eyebrow">Task-specific small model</p>
+        <h2>Held-out flow replay with evidence-grounded analysis</h2>
+      </div>
+      <dl class="run-identity">
+        <div><dt>Run</dt><dd id="run-id">Loading</dd></div>
+        <div><dt>Seed</dt><dd id="run-seed">42</dd></div>
+        <div><dt>Protocol</dt><dd id="run-protocol">Natural prior</dd></div>
+      </dl>
+    </section>
+
+    <section class="metric-band" aria-label="Verified model metrics">
+      <article class="metric">
+        <span>Test accuracy</span><strong id="metric-accuracy">--</strong>
+        <small>stored test artifact</small>
+      </article>
+      <article class="metric">
+        <span>Macro-F1</span><strong id="metric-macro-f1">--</strong>
+        <small>all classes</small>
+      </article>
+      <article class="metric">
+        <span>Single-flow p95</span><strong id="metric-p95">--</strong>
+        <small>measured CPU benchmark</small>
+      </article>
+      <article class="metric">
+        <span>Peak throughput</span><strong id="metric-throughput">--</strong>
+        <small>flows per second</small>
+      </article>
+      <article class="metric">
+        <span>Model footprint</span><strong id="metric-size">--</strong>
+        <small id="metric-parameters">-- parameters</small>
+      </article>
+      <article class="metric accent-metric">
+        <span>Unsupported claims</span><strong id="metric-unsupported">--</strong>
+        <small>verified agent report</small>
+      </article>
+    </section>
+
+    <section class="operations-grid">
+      <article class="panel replay-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Local CPU execution</p>
+            <h3>Held-out flow replay</h3>
+          </div>
+          <div class="replay-controls">
+            <button id="previous-flow" class="icon-command" aria-label="Previous flow" title="Previous flow">&#8592;</button>
+            <button id="toggle-replay" class="primary-command">Start replay</button>
+            <button id="next-flow" class="icon-command" aria-label="Next flow" title="Next flow">&#8594;</button>
+          </div>
+        </div>
+
+        <div class="flow-header">
+          <div>
+            <span class="label">Event ID</span>
+            <code id="event-id">loading</code>
+          </div>
+          <div class="flow-counter"><span id="flow-position">0</span> / <span id="flow-count">256</span></div>
+        </div>
+
+        <div class="verdict-row">
+          <div class="verdict-block">
+            <span class="label">ATLAS prediction</span>
+            <strong id="predicted-label">--</strong>
+            <div class="confidence-track"><span id="confidence-fill"></span></div>
+            <small id="confidence-value">-- confidence</small>
+          </div>
+          <div class="truth-block">
+            <span class="label">Held-out label</span>
+            <strong id="true-label">--</strong>
+            <span id="correctness" class="verdict-chip">--</span>
+          </div>
+          <dl class="runtime-block">
+            <div><dt>Replay latency</dt><dd id="local-latency">--</dd></div>
+            <div><dt>Stored delta</dt><dd id="probability-delta">--</dd></div>
+          </dl>
+        </div>
+
+        <div class="probability-list" id="probability-list" aria-label="Top class probabilities"></div>
+        <p class="scope-note" id="sample-scope"></p>
+      </article>
+
+      <article class="panel agent-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Artifact-grounded agent</p>
+            <h3>Verified security findings</h3>
+          </div>
+          <div class="verification-badge"><strong id="agent-accepted">3</strong> accepted</div>
+        </div>
+        <div id="agent-findings" class="finding-list"></div>
+        <div class="agent-footer">
+          <div><span>Generation</span><strong>Deterministic</strong></div>
+          <div><span>External API</span><strong>None</strong></div>
+          <div><span>Tokens</span><strong>0</strong></div>
+          <div><span>Agent latency</span><strong id="agent-latency">--</strong></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="evidence-section" id="explainability">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Explanation audit</p>
+          <h2>Feature impact, attention, and perturbation controls</h2>
+        </div>
+        <div class="stability-summary">
+          <span>Noise agreement <strong id="stability-agreement">--</strong></span>
+          <span>Feature overlap <strong id="stability-overlap">--</strong></span>
+        </div>
+      </div>
+
+      <div class="evidence-grid">
+        <article class="panel evidence-panel" id="feature-evidence-panel">
+          <div class="panel-heading compact">
+            <h3>Per-flow feature evidence</h3>
+            <span>single-feature occlusion</span>
+          </div>
+          <div id="feature-evidence" class="feature-evidence"></div>
+        </article>
+
+        <article class="panel chart-panel" id="attention-panel">
+          <div class="panel-heading compact">
+            <h3>Branch attention</h3>
+            <span>current replay flow</span>
+          </div>
+          <canvas id="attention-chart" aria-label="Branch attention chart"></canvas>
+        </article>
+
+        <article class="panel chart-panel" id="faithfulness-panel">
+          <div class="panel-heading compact">
+            <h3>Faithfulness control</h3>
+            <span>256 held-out diagnostic flows</span>
+          </div>
+          <canvas id="faithfulness-chart" aria-label="Faithfulness control chart"></canvas>
+        </article>
+
+        <article class="panel chart-panel" id="calibration-panel">
+          <div class="panel-heading compact">
+            <h3>Calibration</h3>
+            <span>test reliability bins</span>
+          </div>
+          <canvas id="calibration-chart" aria-label="Calibration reliability chart"></canvas>
+        </article>
+      </div>
+    </section>
+
+    <section class="deployment-band">
+      <div class="deployment-title">
+        <p class="eyebrow">Measured deployment profile</p>
+        <h2>Compact CPU execution without a language-model runtime</h2>
+      </div>
+      <dl class="deployment-specs">
+        <div><dt>Parameters</dt><dd id="spec-parameters">--</dd></div>
+        <div><dt>Model file</dt><dd id="spec-model-size">--</dd></div>
+        <div><dt>Linear FLOPs / flow</dt><dd id="spec-flops">--</dd></div>
+        <div><dt>Profile threads</dt><dd id="spec-threads">--</dd></div>
+        <div><dt>Peak process RSS</dt><dd id="spec-rss">--</dd></div>
+        <div><dt>Checkpoint parity</dt><dd id="spec-parity">--</dd></div>
+      </dl>
+      <div class="provenance-line">
+        <span>Checkpoint SHA-256</span><code id="checkpoint-hash">--</code>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>Evaluation boundary:</strong> <span id="limitation-replay"></span> <span id="limitation-deployment"></span></p>
+      <p id="limitation-explanation"></p>
+    </footer>
+  </main>
+
+  <div id="loading-state" class="loading-state" role="status">
+    <span></span>Loading verified deployment bundle
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

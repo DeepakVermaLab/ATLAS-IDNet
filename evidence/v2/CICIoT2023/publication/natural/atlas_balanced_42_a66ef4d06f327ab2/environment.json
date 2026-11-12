@@ -1,0 +1,12 @@
+{
+  "python": "3.13.16",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "torch": "2.11.0+cpu",
+  "hostname": "b497dc45c4ac",
+  "cpu_count": 2,
+  "threads": 2,
+  "requested_device": "auto",
+  "actual_device": "cpu",
+  "cuda_available": false,
+  "cuda_name": null
+}

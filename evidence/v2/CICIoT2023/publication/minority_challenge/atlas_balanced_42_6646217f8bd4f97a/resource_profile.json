@@ -1,0 +1,22 @@
+{
+  "scope": "single CPU diagnostics process; prepared arrays to probabilities",
+  "device": "cpu",
+  "threads": 1,
+  "process_rss_before_model_load_bytes": 570810368,
+  "process_rss_after_model_load_bytes": 570847232,
+  "process_rss_delta_model_load_bytes": 36864,
+  "process_rss_after_diagnostics_bytes": 571650048,
+  "process_peak_rss_after_diagnostics_bytes": 605761536,
+  "model_parameter_bytes": 1407124,
+  "model_buffer_bytes": 0,
+  "model_file_bytes": 5746929,
+  "trainable_parameters": 351781,
+  "linear_macs_per_flow": 344192,
+  "linear_flops_per_flow": 688384,
+  "largest_profiled_input_batch_bytes": 94208,
+  "limitations": [
+    "Process RSS includes the Python and PyTorch runtime, loaded data, and prior allocations.",
+    "VmHWM is a process high-water mark and is not attributable only to this model.",
+    "Parameter and buffer byte counts are exact tensor storage, excluding allocator overhead."
+  ]
+}

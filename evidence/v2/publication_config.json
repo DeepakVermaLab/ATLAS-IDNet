@@ -1,0 +1,170 @@
+{
+  "results": "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "challenge_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "epochs": 30,
+  "width": 128,
+  "batch_size": 512,
+  "patience": 7,
+  "loss": "balanced",
+  "challenge_support_policy": {
+    "required_minimum_per_heldout_partition": 15,
+    "preferred_minimum_per_heldout_partition": 30,
+    "below_preferred_interpretation": "source-limited; retain the class, report uncertainty, and avoid strong class-specific claims"
+  },
+  "protocols": {
+    "CICIoT2023": {
+      "natural": {
+        "csv_globs": [
+          "/content/drive/MyDrive/projects/Dataset/Security/CICIoT2023/**/*.csv"
+        ],
+        "label": "label",
+        "split": "stratified",
+        "group_column": null,
+        "time_column": null,
+        "exclude_columns": [
+          "Label",
+          "label",
+          "Attack",
+          "Attack_type",
+          "Class",
+          "Dataset",
+          "dataset",
+          "IPV4_SRC_ADDR",
+          "IPV4_DST_ADDR",
+          "Flow ID",
+          "Src IP",
+          "Dst IP",
+          "Timestamp"
+        ],
+        "max_rows": 500000,
+        "prepared": "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/CICIoT2023/prepared_natural_8451b2005c64"
+      },
+      "minority_challenge": {
+        "csv_globs": [
+          "/content/drive/MyDrive/projects/Dataset/Security/CICIoT2023/**/*.csv"
+        ],
+        "label": "label",
+        "split": "stratified",
+        "group_column": null,
+        "time_column": null,
+        "exclude_columns": [
+          "Label",
+          "label",
+          "Attack",
+          "Attack_type",
+          "Class",
+          "Dataset",
+          "dataset",
+          "IPV4_SRC_ADDR",
+          "IPV4_DST_ADDR",
+          "Flow ID",
+          "Src IP",
+          "Dst IP",
+          "Timestamp"
+        ],
+        "max_rows": 500000,
+        "class_cap": 5000,
+        "prepared": "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/CICIoT2023/prepared_minority_challenge_f0d8baae845c"
+      }
+    },
+    "NF-UQ-NIDS-v2": {
+      "natural": {
+        "csv_globs": [
+          "/content/drive/MyDrive/projects/Dataset/Security/NF-UQ-NIDS-v2/**/*.csv"
+        ],
+        "label": "Attack",
+        "conflicting_duplicate_policy": "drop_all",
+        "split": "stratified",
+        "group_column": null,
+        "time_column": null,
+        "exclude_columns": [
+          "Label",
+          "label",
+          "Attack",
+          "Attack_type",
+          "Class",
+          "Dataset",
+          "dataset",
+          "IPV4_SRC_ADDR",
+          "IPV4_DST_ADDR",
+          "Flow ID",
+          "Src IP",
+          "Dst IP",
+          "Timestamp"
+        ],
+        "max_rows": 500000,
+        "prepared": "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/NF-UQ-NIDS-v2/prepared_natural_25754bea7cee"
+      },
+      "minority_challenge": {
+        "csv_globs": [
+          "/content/drive/MyDrive/projects/Dataset/Security/NF-UQ-NIDS-v2/**/*.csv"
+        ],
+        "label": "Attack",
+        "conflicting_duplicate_policy": "drop_all",
+        "split": "stratified",
+        "group_column": null,
+        "time_column": null,
+        "exclude_columns": [
+          "Label",
+          "label",
+          "Attack",
+          "Attack_type",
+          "Class",
+          "Dataset",
+          "dataset",
+          "IPV4_SRC_ADDR",
+          "IPV4_DST_ADDR",
+          "Flow ID",
+          "Src IP",
+          "Dst IP",
+          "Timestamp"
+        ],
+        "max_rows": 500000,
+        "class_cap": 5000,
+        "prepared": "/content/drive/MyDrive/projects/implementation/ATLAS-IDNet/results/v2/NF-UQ-NIDS-v2/prepared_minority_challenge_dd6b0f63eeb3"
+      }
+    }
+  },
+  "submitted_reference": {
+    "CICIoT2023": {
+      "accuracy": 0.9503,
+      "weighted_f1": 0.9462,
+      "macro_f1": 0.646
+    },
+    "NF-UQ-NIDS-v2": {
+      "accuracy": 0.9795,
+      "weighted_f1": 0.9787,
+      "macro_f1": 0.7154
+    },
+    "provenance": "Previously submitted manuscript; target only, not an independently reproduced baseline."
+  },
+  "preparation_support_audit": {
+    "CICIoT2023/minority_challenge": {
+      "minimum_heldout_support": 125,
+      "required_minimum": 15,
+      "preferred_minimum": 30,
+      "status": "adequate",
+      "interpretation": "standard challenge support"
+    },
+    "NF-UQ-NIDS-v2/minority_challenge": {
+      "minimum_heldout_support": 16,
+      "required_minimum": 15,
+      "preferred_minimum": 30,
+      "status": "source_limited",
+      "interpretation": "source-limited; retain the class, report uncertainty, and avoid strong class-specific claims"
+    }
+  }
+}

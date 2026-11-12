@@ -1,0 +1,50 @@
+{
+  "project_name": "ATLAS-IDNet",
+  "seed": 42,
+  "target_drive_folder_id": "1llQSxhyHiks9lOTX8ZZRMtpn1YnGx8AR",
+  "results_root": null,
+  "work_root": null,
+  "test_size": 0.2,
+  "val_size": 0.1,
+  "batch_size": 1024,
+  "epochs": 35,
+  "learning_rate": 0.0008,
+  "hidden_dim": 256,
+  "dropout": 0.15,
+  "patience": 8,
+  "explain_samples": 512,
+  "latency_samples": 4096,
+  "datasets": {
+    "CICIoT2023": {
+      "name": "CICIoT2023",
+      "local_roots": [
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023/raw/wataiData",
+        "/Volumes/LocalDrive1/Dataset/Security/CICIoT2023"
+      ],
+      "drive_roots": [
+        "/content/drive/MyDrive/projects/Dataset/Security/CICIoT2023",
+        "/content/drive/MyDrive/projects/Dataset/Security/CICIoT2023/wataiData"
+      ],
+      "label_candidates": ["label", "Label", "Attack", "Attack_type", "Class"],
+      "max_files": null,
+      "max_rows": 350000,
+      "chunk_size": 100000
+    },
+    "NF-UQ-NIDS-v2": {
+      "name": "NF-UQ-NIDS-v2",
+      "local_roots": [
+        "/Volumes/LocalDrive1/Dataset/Security/NF-UQ-NIDS-v2/raw/NF-UQ-NIDS-v2.csv",
+        "/Volumes/LocalDrive1/Dataset/Security/NF-UQ-NIDS-v2"
+      ],
+      "drive_roots": [
+        "/content/drive/MyDrive/projects/Dataset/Security/NF-UQ-NIDS-v2/NF-UQ-NIDS-v2.csv",
+        "/content/drive/MyDrive/projects/Dataset/Security/NF-UQ-NIDS-v2",
+        "/kaggle/input/nfuqnidsv2-network-intrusion-detection-dataset/NF-UQ-NIDS-v2.csv"
+      ],
+      "label_candidates": ["Attack", "Label", "label", "Dataset", "class"],
+      "max_files": null,
+      "max_rows": 350000,
+      "chunk_size": 100000
+    }
+  }
+}
